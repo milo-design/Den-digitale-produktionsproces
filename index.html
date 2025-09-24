@@ -2,21 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Side</title>
-    <meta name="description" content="" />
+    <title>Opgave i HTML</title>
+    <meta name="Opgaver i HTML" content="HTML opgave" lang="danish" />
     <style>
-      .h1 {
+      h1 {
         font-size: 42px;
         font-weight: 800;
       }
-      .h2 {
+      h2 {
         font-size: 32px;
         font-weight: 700;
       }
-      .h3 {
+      h3 {
         font-size: 26px;
         font-weight: 700;
       }
+
+      img {
+        height: 200px;
+      }
+
       .small {
         font-size: 12px;
         color: #666;
@@ -26,88 +31,96 @@
         border: 1px solid #ddd;
         margin: 12px 0;
       }
+
+      .img-box {
+        display: initial;
+      }
     </style>
   </head>
   <body>
-    <div class="box">
-      <div class="h3">Kontakt os nu!</div>
-      <div>
-        Læs mere <a href="#">her</a> om alt det vigtige (BEVIDST: "her"-link
-        uden beskrivende tekst).
-      </div>
-    </div>
+    <section class="box">
+      <h3>Kontakt os nu!</h3>
+      <p><a href="#">Læs mere om alt det vigtige</a>.</p>
+    </section>
 
-    <div class="h1">Semantik og SEO i digitalt workflow</div>
-    <div class="h1">Hvorfor er det vigtigt? (Anden H1 – BEVIDST FEJL)</div>
+    <h1>Semantik og SEO i digitalt workflow</h1>
+    <h2>Hvorfor er det vigtigt?</h2>
 
-    <div class="box">
-      <div class="h3">Baggrund</div>
-      <div class="h2">
-        Dette burde måske være et underafsnit, men er større end ovenfor
-      </div>
-      <div>
+    <section class="box">
+      <h2>Baggrund</h2>
+      <h3>Dette burde måske være et underafsnit, men er større end ovenfor</h3>
+      <p>
         I webproduktion handler semantik om at bruge de rigtige elementer til
         indholdet.
         <b>SEO</b> hjælper søgemaskiner med at forstå siden, men her bruger vi
         <i>kun divs</i>
         og forkerte pseudo-overskrifter.
-      </div>
-    </div>
+      </p>
+    </section>
 
-    <div class="box">
-      <div class="h2">Typiske aspekter (burde være under hovedemnet)</div>
-      <div>• Kun én hovedoverskrift pr. side (H1)</div>
-      <div>• Logisk rækkefølge af H2 → H3 → H4</div>
-      <div>• Meningsfulde filnavne og alt-tekster</div>
-      <div>• Korrekt billedformat (WebP/AVIF/JPEG)</div>
-      <div class="small">
-        (Her er punkterne korrekte, men strukturen er forkert.)
-      </div>
-    </div>
+    <section class="box">
+      <h2>Typiske aspekter</h2>
+      <ul>
+        <li>Kun én hovedoverskrift pr. side (H1)</li>
+        <li>Logisk rækkefølge af H2 → H3 → H4</li>
+        <li>Meningsfulde filnavne og alt-tekster</li>
+        <li>Korrekt billedformat (WebP/AVIF/JPEG)</li>
+      </ul>
+    </section>
 
-    <div class="box">
-      <div class="h3">Eksempler på billeder (med fejl)</div>
-
-      <div>
-        <img src="images/billede1.jpg" />
+    <section class="box">
+      <h2>Eksempler på billeder</h2>
+      <div class="img-box">
+        <img
+          alt="Grafik af tre rejsetasker i forskellige farver med en stiplet linje til en gps markør."
+          src="/assets/img/grafik-rejsetasker-til-destination.jpg"
+          loading="lazy"
+        />
       </div>
-
-      <div>
-        <img src="assets/billede2.png" alt="" />
+      <div class="img-box">
+        <img
+          alt="Et rødt blad med fem afgreninger ligger på en skovbund samt andre blade, hvor sollys skinner igennem det."
+          src="/assets/img/roedt-blad-i-skovbund.jpg"
+          loading="lazy"
+        />
       </div>
-
-      <div>
-        <img src="9266941.jpg" alt="billede3" />
+      <div class="img-box">
+        <img
+          alt="En gotisk bygning med et spir på et afrundet kobber tag, og billet er taget i frøperspektiv."
+          src="/assets/img/gotisk-bygning-med-taarn.jpg"
+          loading="lazy"
+        />
       </div>
-
-      <div>
-        <img src="media/BILLEDE4.JPG" title="billede4" />
+      <div class="img-box">
+        <img
+          alt="En stribet kat i en kurv med et pelset betræk, som er en svag brun grå farve. Katten kigger ud til venstre side af billedet."
+          src="/assets/img/stribet-kat-i-kurv.jpg"
+          loading="lazy"
+        />
       </div>
-    </div>
+    </section>
 
-    <div class="box">
-      <div class="h3">
-        Yderligere information (burde være underordnet ovenfor)
-      </div>
-      <div>
+    <section class="box">
+      <h3>Yderligere information</h3>
+      <p>
         Husk at søgemaskiner læser struktur, overskrifter og alternative
         tekster. Denne side er <b>med vilje</b> ikke tilgængelighedsvenlig,
         semantisk eller SEO-klar.
-      </div>
-    </div>
+      </p>
+    </section>
 
-    <div class="box">
-      <div class="h2">Konklusion (burde være H2 under én korrekt H1)</div>
-      <div>
+    <section class="box">
+      <h2>Konklusion (burde være H2 under én korrekt H1)</h2>
+      <p>
         Opgave: omskriv hele siden til korrekt semantisk HTML. Brug rigtige
-        <strong>h1–h6</strong>, meningsfulde alt-tekster, passende
+        <strong>h1-h6</strong>, meningsfulde alt-tekster, passende
         billedformater, korrekt metadata, sprog og beskrivende links.
-      </div>
-    </div>
+      </p>
+    </section>
 
-    <div id="footer" class="small">
-      © 2025 – Skolen. Alle rettigheder forbeholdes. (Ingen relevante links
+    <footer class="small">
+      © 2025 - Skolen. Alle rettigheder forbeholdes. (Ingen relevante links
       eller structured data)
-    </div>
+    </footer>
   </body>
 </html>
